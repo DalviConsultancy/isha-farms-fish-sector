@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isha's Fish Shop</title>
+    <link rel="icon" href="https://i.ibb.co/sJ9FQ0xP/Fish-Clown.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            background-color: #f4f9fc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin: 0;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 1;
+            font-family: 'Pacifico', cursive;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            margin-top: 10px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-image {
+            max-width: 250px;
+            animation: float 6s ease-in-out infinite;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .fish-image {
+            position: absolute;
+            width: 80px; /* Adjust size as needed */
+            height: auto;
+            animation: float 4s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        .stationary-nemo {
+            position: absolute;
+            width: 60px; /* Adjust size as needed */
+            height: auto;
+            z-index: 10; /* Above content */
+            animation: tiltNemo 2s infinite alternate steps(1); /* Apply the new animation */
+        }
+
+        @keyframes tiltNemo {
+            0% { transform: rotate(0deg) scaleX(-1); }
+            50% { transform: rotate(15deg) scaleX(-1); }
+            100% { transform: rotate(0deg) scaleX(-1); }
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            background-color: #ffffff;
+            padding: 40px 80px; /* Increased horizontal padding */
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+            animation-delay: 0.5s;
+            position: relative; /* Crucial for absolute positioning of children */
+            overflow: hidden; /* Hide elements that go outside the section */
+        }
+
+        .care-section {
+            background-color: #e6f7ff; /* Light blue background */
+            border: 1px solid #b3e0ff;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .fish-image {
+            position: absolute;
+            width: 80px; /* Adjust size as needed */
+            height: auto;
+            animation: float 4s ease-in-out infinite;
+            z-index: 1;
+        }
+
+
+        h2 {
+            color: #0077b6;
+            font-size: 2.2em;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(79, 172, 254, 0.6);
+        }
+        
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .pro-setup {
+            background-color: #0077b6;
+            color: white;
+        }
+        
+        .pro-setup h2 {
+            color: white;
+        }
+
+        .pro-setup .button {
+            background: white;
+            color: #0077b6;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .pro-setup .button:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #777;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>Welcome to Isha's Fish Shop</h1>
+        <p>Your destination for vibrant, healthy guppies and hassle-free aquarium setups in India.</p>
+        <div class="button-container">
+            <a href="https://dalviconsultancy.github.io/isha-farms-fish-sector/guppy_shop.html" class="button">Explore Our Guppies</a>
+        </div>
+        <img src="https://i.ibb.co/sJ9FQ0xP/Fish-Clown.png" alt="Fish 1" class="fish-image flipped" style="top: 10%; left: 5%;">
+        <img src="https://i.ibb.co/sJ9FQ0xP/Fish-Clown.png" alt="Fish 2" class="fish-image" style="top: 40%; right: 10%;">
+        <img src="https://i.ibb.co/sJ9FQ0xP/Fish-Clown.png" alt="Fish 3" class="fish-image flipped" style="top: 70%; left: 30%;">
+    </div>
+
+    <div class="container">
+        <div id="shop" class="section care-section">
+            <h2>Guppy Care: The Basics</h2>
+            <p>Once your guppies are settled, their daily care is straightforward. Feed them a high-quality flake food once or twice a day, only what they can consume in a minute or two. Overfeeding can lead to poor water quality. Perform a 25% water change weekly to keep the water fresh and clean. Regularly observe your guppies for any signs of stress or illness, ensuring they remain vibrant and active.</p>
+        </div>
+
+        <div class="section" id="setup-guide">
+            <h2>Tank Setup: Quick Start</h2>
+            <p>Setting up a beautiful home for your guppies is easier than you think. For a small group of 3-5 guppies, a 15-20 litre tank is a great start. Just add clean water (dechlorinated with a simple water conditioner), a small filter, and some gravel. Let the filter run for a day or two, and you're ready to introduce your new friends!</p>
+        </div>
+
+        <div class="section pro-setup">
+            <h2>Want it Done for You?</h2>
+            <p>For the ultimate convenience, let our experts handle everything. Our Professional Setup Service provides a complete, ready-to-enjoy aquarium in your home or office. We deliver the tank, install all equipment, and perfectly prepare the environment for your new guppies. It's the perfect solution for busy individuals who want a stunning aquarium without any of the work.</p>
+            <div class="button-container">
+                <a href="#contact" class="button">Book Your Professional Setup</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="footer">
+        <p>Made by Ishaan Dalvi</p>
+    </div>
+
+</body>
+</html>
